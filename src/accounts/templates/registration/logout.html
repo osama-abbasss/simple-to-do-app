@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% block title %}
+  logout
+{% endblock %}
+
+{% block content %}
+<div class="container mt-3 mb-3 ">
+
+
+<form  method="post" class="signupform" style="position: relative; top: 100px;">
+  <h2> Logout</h2>
+  {% csrf_token %}
+  {% bootstrap_form form %}
+  <div class="button">
+    <button type="submit" class="btn btn-primary">Logout</button>
+  </div>
+
+</form>
+</div>
+{% endblock %}
